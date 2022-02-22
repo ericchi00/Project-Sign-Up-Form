@@ -1,0 +1,139 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.leftsideColumn {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    background-image: url('images/sakuraflower.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.leftsideColumn p{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+img[src="images/rose.svg"] {
+    display: flex;
+    height: 20%;
+    width: 20%;
+}
+
+.contentContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;
+    background: #f5f5f7;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30vh;
+    background: rgba(255,255,255, .5);
+}
+
+.companyName{
+    display: flex;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+}
+
+.formContainer {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 2px 5px grey;
+
+}
+
+.accountContainer {
+    padding-top: 2em;
+    padding-left: 2em;
+}
+
+fieldset {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 0;
+    padding-left: 2em;
+    border: none;
+}
+
+legend {
+    font-weight: bold;
+    font-size: larger;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 75px;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 250px;
+}
+
+.heroContent {
+    position: relative;
+    height: 30%;
+}
+
+.heroContent p {
+    position: absolute;
+    bottom: 2em;
+    font-size: 20px;
+    padding-left: 2em;
+}
+
+button {
+    background-color: lightblue;
+    height: 40px;
+    width: 200px;
+    border-radius: 4px;
+    font-size: large;
+    padding: 5px;
+}
+
+button:focus {
+    background-color: rgb(103, 141, 153);
+}
+
+.error-message {
+    display: none;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block; 
+}
+input:not(:focus):not(:placeholder-shown):valid {
+    border: 2px solid green;
+}

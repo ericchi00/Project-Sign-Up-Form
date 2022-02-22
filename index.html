@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+</head>
+<body>
+    <div class="leftsideColumn">
+        <div class="logoContainer">
+                <div class="companyName">FLOWER CO.</div>
+                <img src="images/rose.svg" alt="Rose Logo">
+        </div>
+        <p>Image by: <a href="https://unsplash.com/@ujitomo">TOMOKO UJI</a> on <a href="https://unsplash.com/photos/eriuKJwcdjI">Unsplash</a></p>
+    </div>
+    <div class="contentContainer">
+        <div class="heroContent">
+            <p>
+                This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi! Sign up now to get started.
+            <br>You <em>know</em> you want to.</p>
+        </div>
+        <div class="formContainer">
+            <form id="signUpForm" method="post">
+                <fieldset>
+                        <legend>Sign up now!</legend>
+                        <p class="required">Fields marked with * are required.</p>
+                    <ul>
+                        <li>
+                            <label for="first_name">FIRST NAME*</label>
+                            <input type="text" name="first_name" id="first_name" placeholder=" " required>
+                        </li>
+                        <li>
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" name="last_name" placeholder=" " id="last_name">
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label for="email">EMAIL*</label>
+                            <input type="email" name="email" id="email" placeholder=" " required>
+                            <p class="error-message">Email is not valid.</p>
+                        </li>
+                        <li>
+                            <label for="phone_number">PHONE NUMBER</label>
+                            <input type="tel" name="phone_number" id="phone_number" placeholder=" " pattern="/^[+]?[\s./0-9]*[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/g">
+                        </li>
+                    </ul>
+                        <ul>
+                            <li>
+                                <label for="pwd">PASSWORD*</label>
+                                <input type="password" name="pwd" id="pwd" placeholder=" " pattern=".{8,}" required>
+                                <p class="error-message">Password must be 8 characters or more.</p>
+                                <p class="checkPasswordMatch"></p>
+                            </li>
+                            <li>
+                                <label for="confirmPWD">CONFIRM PASSWORD*</label>
+                                <input type="password" name="confirmPWD" id="confirmPWD" placeholder=" " pattern=".{8,}" required>
+                                <p class="error-message">Password must be 8 characters or more.</p>
+                                <p class="checkPasswordMatch"></p>
+                            </li>
+                        </ul>
+                </fieldset>
+            </form>
+        </div>
+        <div class="accountContainer">
+            <button type="submit" onclick="passwordMatch()">Create Account</button>
+            <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
